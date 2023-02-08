@@ -48,3 +48,28 @@ print(numList)
 #? Reverse values
 print(numList.reverse()) ## Don't return reversed list
 print(numList)
+
+#? Playing with Lists
+newList = ['1', 2, 3.4, True]
+print(newList) ## Can't sort if different object types
+
+#* Dictionary
+myDictionary = {'k1':'v1', 'k2':'v2'}
+print(myDictionary)
+print(myDictionary.keys())
+print(myDictionary.values())
+print(myDictionary.items())
+print(myDictionary['k1']) 
+
+newDictionary = {'K1':[1,2,4,3,9], 'K2':{'k1':'v1', 'k2':'v2'}}
+print(newDictionary['K1'][2])
+print(newDictionary['K2']['k1'])
+
+#? Adding new pairs
+print(newDictionary)
+newDictionary['K3'] = 1
+print(newDictionary)
+
+#? Play with Dictionary
+newDictionary['K1'].sort()
+print(newDictionary)
