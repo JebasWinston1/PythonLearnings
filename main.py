@@ -89,3 +89,26 @@ print(myTuple.index(3))
 myTuple = tuple(sorted(myTuple))
 print(myTuple)
 print(type(myTuple))
+
+#* Set
+charSet = {'a', 'z', 'y', 'w'}
+print(charSet)
+numSet = {9,4,6,1,0}
+print(numSet)
+decimalSet = {9.3,0.1,3.4,2.9}
+print(decimalSet)
+
+#? Adding new values
+decimalSet.add(5.2)
+print(decimalSet)
+
+#? Removing values
+print(decimalSet.pop())
+print(decimalSet)
+
+#? Play with set
+## newSet = numSet + decimalSet we can't add set like this
+newSet = numSet.union(decimalSet)
+print(newSet)
+print(numSet)
+
