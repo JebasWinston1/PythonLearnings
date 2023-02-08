@@ -54,7 +54,7 @@ newList = ['1', 2, 3.4, True]
 print(newList) ## Can't sort if different object types
 
 #* Dictionary
-myDictionary = {'k1':'v1', 'k2':'v2'}
+myDictionary = {'k2':'v2', 'k1':'v1'}
 print(myDictionary)
 print(myDictionary.keys())
 print(myDictionary.values())
@@ -73,3 +73,19 @@ print(newDictionary)
 #? Play with Dictionary
 newDictionary['K1'].sort()
 print(newDictionary)
+
+#* Tuple
+myTuple = (8,2,3,2,3,2)
+print(myTuple)
+
+#? Counting number of occurences
+print(myTuple.count(2))
+
+#? Finding index of an object
+print(myTuple.index(3))
+
+#? Play with tuple 
+#* Sorting a tuple in easier way
+myTuple = tuple(sorted(myTuple))
+print(myTuple)
+print(type(myTuple))
