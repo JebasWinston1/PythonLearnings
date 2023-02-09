@@ -112,3 +112,38 @@ newSet = numSet.union(decimalSet)
 print(newSet)
 print(numSet)
 
+#* Files
+#? Opening a file
+myFile = open('sample.txt')
+
+#? Reading the contents of the file
+print(myFile.read()) 
+print(myFile.read()) ## The cursor will be in the end. So, white space
+
+#? Moving the cursor to a specific location 
+myFile.seek(0)
+
+#? Reading only one line 
+print(myFile.readline())
+print(myFile.readline())
+myFile.seek(0)
+
+#? File contents in a list 
+fileList = myFile.readlines()
+print(fileList)
+
+#? Closing a file
+myFile.close()
+
+#? Alternate method for open a file
+with open('sample.txt') as myFile:
+    print(myFile.read()) ## In this method no need to close file
+
+#? Creating a new file even if it's not exists
+## Write Mode
+with open('newFile.txt', mode='w') as myFile:
+    myFile.write('Hello, World!!')
+
+## Read Mode
+with open('newFile.txt', mode='r') as myFile:
+    print(myFile.read())
