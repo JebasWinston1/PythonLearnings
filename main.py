@@ -228,3 +228,51 @@ for _ in numList: ## numList = [6,1,2,4,6,5,0,8]
     else:
         print(_)
 print("----------------------------------")
+
+#* Useful Operators
+#? in range
+for _ in range(0,11,2): ## range(start, stop before, step) 
+    print(_)
+print("----------------------------------")
+
+#? enumerate
+sample = 'Hello, how are you?'
+for _ in enumerate(sample): ## Assingning each character with it's index eg: (0, I)
+    print(_)
+print("----------------------------------")
+
+#? zip
+for _ in zip(numList, charList): ## Zipping up two lists eg: (l1, L1)
+    print(_)
+print("----------------------------------")
+
+#? in
+print('o' in 'hello') ## Used for checking whether the value is present or not.
+print("----------------------------------")
+
+#? min
+print(min(numList)) ## Finding minimum value
+print("----------------------------------")
+
+#? max
+print(max(numList)) ## Finding maximum value
+print("----------------------------------")
+
+#? random library
+#! Shuffle values in a list
+from random import shuffle
+sampleList = [1,2,3,4,5,6,7,8,9,0]
+print(sampleList)
+shuffle(sampleList)
+print(sampleList)
+print("----------------------------------")
+
+#! Produce random integer within the given range
+from random import randint
+print(randint(1,6)) ## randint(start, end)
+print("----------------------------------")
+
+#? input
+inputData = input('Hey, send me back a message.') ## Used to get user input
+print(type(inputData)) ## Default type will be string
+print("----------------------------------")
