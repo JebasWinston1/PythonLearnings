@@ -147,3 +147,19 @@ with open('newFile.txt', mode='w') as myFile:
 ## Read Mode
 with open('newFile.txt', mode='r') as myFile:
     print(myFile.read())
+
+#* If Statements
+clubName = 'Bayern Munich'
+
+if clubName == 'Barcelona':
+    print('LaLiga')
+elif clubName == 'Man City':
+    print('Premier League')
+elif clubName == 'PSG':
+    print('Ligue 1')
+elif clubName == 'Bayern Munich':
+    print('Bundesliga')
+elif clubName == 'Juventus':
+    print('Serie A')
+else:
+    print("What's your league?")
