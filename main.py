@@ -322,3 +322,32 @@ def my_function(name='Will'):
     print(f'Hello, {name}')
 my_function()
 print("----------------------------------")
+
+#? Play with functions
+def remove_odd(myList):
+    for _ in myList:
+        if _ % 2 == 0:
+            pass ## return True -> Don't use it
+        else:
+            return False
+    return True
+print(remove_odd([2,4,6,8,0,6]))
+print("----------------------------------")
+
+#? Tuple Unpacking
+myList = [('Will',500),('Smith',300),('Dan',320)]
+def find_max(myList):
+    name = ''
+    value = 0
+    for key,val in myList: ## Iterating through list containing tuples
+        if val > value:
+            name = key
+            value = val
+        else:
+            pass
+    return (name, value)
+print(find_max(myList))
+name, value = find_max(myList) ## This is unpacking the tuple 
+## name, value, key = find_max(myList) -> Error: the tuple contains 2 and expected 3 values
+print(f'Name: {name}, Value: {value}')
+print("----------------------------------")
