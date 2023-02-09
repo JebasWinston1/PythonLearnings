@@ -273,6 +273,28 @@ print(randint(1,6)) ## randint(start, end)
 print("----------------------------------")
 
 #? input
-inputData = input('Hey, send me back a message.') ## Used to get user input
-print(type(inputData)) ## Default type will be string
+## inputData = input('Hey, send me back a message.') ## Used to get user input
+## print(type(inputData)) ## Default type will be string
 print("----------------------------------")
+
+#* List Comprehension
+## Prefer readability over short one liner
+#? Adding values to an empty list
+newList = [val for val in range(1,11)]
+print(newList)
+print("----------------------------------")
+
+#? Adding condition
+newList = [val for val in range(1,11) if val%2 == 0]
+print(newList)
+print("----------------------------------") 
+
+#? Adding else condition
+newList = [val if val%2 == 0 else 0 for val in range(1,11)]
+print(newList)
+print("----------------------------------") 
+
+#? Nested For loop
+newList = [x*y for x in range(1,11) for y in range(1,11)]
+print(newList)
+print("----------------------------------") 
