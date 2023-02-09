@@ -298,3 +298,27 @@ print("----------------------------------")
 newList = [x*y for x in range(1,11) for y in range(1,11)]
 print(newList)
 print("----------------------------------") 
+
+#* Functions
+def my_function():
+    print("Hello!")
+my_function()
+print("----------------------------------")
+
+#? Function with parameter
+def my_function(name):
+    print(f'Hello, {name}')
+my_function('Will')
+print("----------------------------------")
+
+#? Function returning value
+def add_me(num1, num2):
+    return num1+num2
+print('Sum of 10 and 20 is {}'.format(add_me(10,20)))
+print("----------------------------------")
+
+#? Function with default value
+def my_function(name='Will'):
+    print(f'Hello, {name}')
+my_function()
+print("----------------------------------")
