@@ -3,11 +3,13 @@ print('This is a {}'.format('cat'))
 print('This {} {} {}'.format('is', 'a', 'cat'))
 print('This {2} {2} {0}'.format('is', 'a', 'cat'))
 print('This {c} {a} {i}'.format(i='is', a='a', c='cat'))
+print("----------------------------------")
 
 #* F String or Formatted String Literals
 name = 'Jose'
 age = 21
 print(f'{name} is {age} years old')
+print("----------------------------------")
 
 #* List
 charList = ['a', 'c', 'b', 'x', 'd']
@@ -52,6 +54,7 @@ print(numList)
 #? Playing with Lists
 newList = ['1', 2, 3.4, True]
 print(newList) ## Can't sort if different object types
+print("----------------------------------")
 
 #* Dictionary
 myDictionary = {'k2':'v2', 'k1':'v1'}
@@ -73,6 +76,7 @@ print(newDictionary)
 #? Play with Dictionary
 newDictionary['K1'].sort()
 print(newDictionary)
+print("----------------------------------")
 
 #* Tuple
 myTuple = (8,2,3,2,3,2)
@@ -85,10 +89,11 @@ print(myTuple.count(2))
 print(myTuple.index(3))
 
 #? Play with tuple 
-#* Sorting a tuple in easier way
+## Sorting a tuple in easier way
 myTuple = tuple(sorted(myTuple))
 print(myTuple)
 print(type(myTuple))
+print("----------------------------------")
 
 #* Set
 charSet = {'a', 'z', 'y', 'w'}
@@ -111,6 +116,7 @@ print(decimalSet)
 newSet = numSet.union(decimalSet)
 print(newSet)
 print(numSet)
+print("----------------------------------")
 
 #* Files
 #? Opening a file
@@ -147,6 +153,7 @@ with open('newFile.txt', mode='w') as myFile:
 ## Read Mode
 with open('newFile.txt', mode='r') as myFile:
     print(myFile.read())
+print("----------------------------------")
 
 #* If Statements
 clubName = 'Bayern Munich'
@@ -163,3 +170,31 @@ elif clubName == 'Juventus':
     print('Serie A')
 else:
     print("What's your league?")
+print("----------------------------------")
+
+#* For Loop
+for num in numList:
+    if num % 2 == 0:
+        print(f'{num} is even.')
+    else:
+        print(f'{num} is odd.')
+        
+#? Tuple Unpacking
+sampleList = [(1,2),(3,4),(5,6)]
+for (a,b) in sampleList:
+    print(a, b)
+
+#? Iterating a string
+for _ in 'Hello': ## If we don't like to give a variable name use '_'
+    print(_)
+
+#? Iterating a dictionary
+#! Note: The values in the dictionary may not come in the same way that we insert.
+for _ in myDictionary: ## Will print only keys
+    print(_)
+
+for value in myDictionary.values(): ## Will print values
+    print(value)
+
+for key,value in myDictionary.items(): ## Will print key as well as value
+    print(key, value)
