@@ -198,3 +198,33 @@ for value in myDictionary.values(): ## Will print values
 
 for key,value in myDictionary.items(): ## Will print key as well as value
     print(key, value)
+print("----------------------------------")
+
+#* While Loop
+x = 0
+numList = [6,4,1,2,4,6,5,0,8]
+while x < len(numList) and numList[x] % 2 == 0:
+    print("I'm inside the loop!")
+    x += 1
+else: ## We can have else statement in while loop
+    print("I'm outside the loop!")
+print("----------------------------------")
+
+#* Pass
+for _ in numList: 
+    ## Print value (Only comment line in the loop will through you exception)
+    pass ## pass is used when we add the funtionality of the loop later. 
+
+#* Continue
+for _ in numList:
+    if _ % 2 == 0:
+        continue
+    print(_)
+
+#* Break
+for _ in numList: ## numList = [6,1,2,4,6,5,0,8]
+    if not(_ % 2 == 0):
+        break
+    else:
+        print(_)
+print("----------------------------------")
