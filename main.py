@@ -417,3 +417,33 @@ print(bayern.stadium)
 bayern.buy_player('Lewandowski')
 bayern.loan_player('Sabitzer', 'Man United')
 print("----------------------------------")
+
+#* Inheritance and Polymorphism
+class Animal():
+    def __init__(self):
+        pass
+
+    def who_am_i(self):
+        print("I'm an animal")
+    
+    def eat(self):
+        print("I'm eating. Yummy!!!")
+    
+    def speak(self):
+        print("I'm speaking")
+
+class Dog(Animal):
+    def __init__(self):
+        Animal.__init__(self)
+        pass
+
+    def who_am_i(self):
+        print("I'm a dog")
+
+    def speak(self):
+        print("WHOOF!")
+
+miles = Dog()
+miles.who_am_i()
+miles.eat()
+miles.speak()
