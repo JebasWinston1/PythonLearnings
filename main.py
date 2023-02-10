@@ -393,3 +393,27 @@ print(list(map(check_even, numList)))
 print(list(filter(check_even, numList)))
 print(list(filter(lambda num: num % 2 != 0, numList))) ## Lambda Function
 print("----------------------------------")
+
+#* Class
+class Club():
+    # Attributes
+    name = 'Bayern Munich'
+    def __init__(self, name, stadium, captain): # Similar to constructor
+        self.name = name
+        self.stadium = stadium
+        self.captain = captain
+    
+    # Actions
+    def buy_player(self, name):
+        print(f'{name}, Here we go... {self.name}')
+
+    def loan_player(self, name, club_name):
+        #! Prefer ClassName.attribute over self.attribute. It helps in debugging
+        # Club.name can not be used for the attributes initialized through constructor
+        print(f'{Club.name} sold {name} on loan to {club_name}')
+
+bayern = Club('Bayern Munich','Allianz Arena','Neur')
+print(bayern.stadium)
+bayern.buy_player('Lewandowski')
+bayern.loan_player('Sabitzer', 'Man United')
+print("----------------------------------")
