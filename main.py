@@ -354,9 +354,12 @@ print("----------------------------------")
 
 #* *args
 def samle_function(*args): ## *args can use any name
-    print(sum(args))
-samle_function(70,30)
-samle_function(40,20,40)
+    if 6 in args:
+        return False
+    return sum(args) + 10
+# samle_function(70,30)
+# samle_function(40,20,40)
+print("----------------------------------")
 
 #* **kwargs
 def test_function(**kwargs):
@@ -367,8 +370,26 @@ def test_function(**kwargs):
 test_function(football ='Bayern Munich')
 test_function(cricket = 'Sydney Sixers')
 test_function(cricket = 'Sydney Sixers', football ='Bayern Munich')
+print("----------------------------------")
 
 #* *args and **kwargs
 def new_function(*args, **kwargs):
     print(f'The tuple {args}, The dictionary {kwargs}')
 new_function(20,30,50,cricket = 'Sydney Sixers', football ='Bayern Munich')
+print("----------------------------------")
+
+#* Map Function
+print(numList)
+print(list(map(samle_function,numList)))
+print(list(filter(samle_function,numList)))
+print(list(map(lambda num: num**2, numList))) ## Lambda Function
+print("----------------------------------")
+
+#* Filter Function
+def check_even(num):
+    return num%2 == 0
+
+print(list(map(check_even, numList)))
+print(list(filter(check_even, numList)))
+print(list(filter(lambda num: num % 2 != 0, numList))) ## Lambda Function
+print("----------------------------------")
