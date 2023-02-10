@@ -468,3 +468,7 @@ death_note = Series()
 print(str(death_note))
 del(death_note) 
 print("----------------------------------")
+
+#* Modules and Packages
+from ball_cup_game import core_game
+core_game()
