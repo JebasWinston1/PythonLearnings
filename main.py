@@ -82,7 +82,7 @@ print("----------------------------------")
 myTuple = (8,2,3,2,3,2)
 print(myTuple)
 
-#? Counting number of occurences
+#? Counting number of occurrences
 print(myTuple.count(2))
 
 #? Finding index of an object
@@ -213,7 +213,7 @@ print("----------------------------------")
 #* Pass
 for _ in numList: 
     ## Print value (Only comment line in the loop will through you exception)
-    pass ## pass is used when we add the funtionality of the loop later. 
+    pass ## pass is used when we add the functionality of the loop later. 
 
 #* Continue
 for _ in numList:
@@ -237,7 +237,7 @@ print("----------------------------------")
 
 #? enumerate
 sample = 'Hello, how are you?'
-for _ in enumerate(sample): ## Assingning each character with it's index eg: (0, I)
+for _ in enumerate(sample): ## Assigning each character with it's index eg: (0, I)
     print(_)
 print("----------------------------------")
 
@@ -470,5 +470,29 @@ del(death_note)
 print("----------------------------------")
 
 #* Modules and Packages
-from ball_cup_game import core_game
-core_game()
+# from ball_cup_game import core_game # from (another py filename) import (function name)
+# core_game()
+print("----------------------------------")
+
+#* Exception Handling
+def add(value):
+    try:
+        value = value + 10
+    except: # This gets triggered if there's any error occurred
+        print("Exception thrown!")
+    else: # This gets executed if there is no error in try block with no return keyword
+        print("Can I enter?")
+    finally: # This always run
+        print("I always run")
+print(add(int(input("Enter a value: "))))
+print("----------------------------------")
+
+#* Generators
+def fib_gen(num):
+    a,b= 1,1
+    for i in range(num):
+        yield a
+        a,b = b,b+a
+
+for i in fib_gen(4):
+    print(i)
