@@ -447,3 +447,24 @@ miles = Dog()
 miles.who_am_i()
 miles.eat()
 miles.speak()
+print("----------------------------------")
+
+#* Magic or Dunder Methods
+#? User defined data types can't use in-built functions.
+class Series():
+    name = 'Death Note'
+    language = 'English'
+    episodes = 43
+
+    def __init__(self):
+        pass
+
+    def __str__(self): # Used to convert Series object into a String. eg. str(SeriesObject)
+        return f"{Series.name} in {Series.language} language with {Series.episodes} episodes"
+
+    def __del__(self): # It gets triggered when the object gets deleted.
+        return "The object has been deleted!"
+death_note = Series()
+print(str(death_note))
+del(death_note) 
+print("----------------------------------")
