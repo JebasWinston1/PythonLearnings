@@ -300,15 +300,15 @@ print(newList)
 print("----------------------------------") 
 
 #* Functions
-def my_function():
+def old_function():
     print("Hello!")
-my_function()
+old_function()
 print("----------------------------------")
 
 #? Function with parameter
-def my_function(name):
+def temp_function(name):
     print(f'Hello, {name}')
-my_function('Will')
+temp_function('Will')
 print("----------------------------------")
 
 #? Function returning value
@@ -351,3 +351,24 @@ name, value = find_max(myList) ## This is unpacking the tuple
 ## name, value, key = find_max(myList) -> Error: the tuple contains 2 and expected 3 values
 print(f'Name: {name}, Value: {value}')
 print("----------------------------------")
+
+#* *args
+def samle_function(*args): ## *args can use any name
+    print(sum(args))
+samle_function(70,30)
+samle_function(40,20,40)
+
+#* **kwargs
+def test_function(**kwargs):
+    if 'football' in kwargs:
+        print(f"The football club is {kwargs['football']}")
+    else:
+        print("It's not a football club")
+test_function(football ='Bayern Munich')
+test_function(cricket = 'Sydney Sixers')
+test_function(cricket = 'Sydney Sixers', football ='Bayern Munich')
+
+#* *args and **kwargs
+def new_function(*args, **kwargs):
+    print(f'The tuple {args}, The dictionary {kwargs}')
+new_function(20,30,50,cricket = 'Sydney Sixers', football ='Bayern Munich')
