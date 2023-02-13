@@ -576,3 +576,12 @@ random.seed(2)
 print(random.randint(0,100))
 print(random.randint(0,100))
 print("----------------------------------")
+
+#* Regular Expression
+import re
+test_string = "Hello, I'm a cat. I sound like 'Meow'. Dial my number +91 9876543210 and not +91 0987654321"
+matches = re.search(r'\+91\s[\d{10}]+', test_string) # Returns the match object with the match and the index
+print(matches)
+print(matches.span()) # Shows the index upto which the matched string gets spanned 
+print(matches.group()) # Shows the matched string
+print("----------------------------------")
