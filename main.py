@@ -644,3 +644,53 @@ print(abs(2))
 #? Rounding Of
 print(round(3.14985673489))
 print(round(3.14985673489, 3)) # Rounding of to two decimal places
+
+#* Advanced Strings
+#? Capitalize
+# Capitalize the first letter of the first word
+print("hello world".capitalize())
+
+#? Title
+# Capitalize the first letter of all the words
+print("hello world".title())
+
+#? Check for alphanumeric characters
+# If there's a space or any special characters it'll return false
+print("hello world".isalnum())  
+
+#? Check for only numeric characters
+# If there's a space or any other characters it'll return false
+print("1233".isnumeric())
+
+#? Check for only alphabetic characters
+# If there's a space or any other characters it'll return false
+print("SAt".isalpha())
+
+#? Check for only space
+# If there's any other characters or empty string it'll return false
+print(" ".isspace())
+
+#? Upper
+# Capitalize all the characters
+print("hello world".upper())
+
+#? Lower
+# Lower case all the characters
+print("HELLO WORLD".lower())
+
+#? Count
+# Count number of occurrences of the character
+print("hello world".count('o'))
+
+#? Find
+# Find the first occurrence of the word
+print("hello world".find('o'))
+
+#? Center
+# Center the content within the given width
+print("hello world".center(30,'-'))
+
+#! Other checks
+#? isupper
+#? istitle
+#? endswith
