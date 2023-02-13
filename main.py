@@ -612,3 +612,15 @@ shutil.make_archive('extract_me','zip',path)
 #? Unzipping a file using shutil
 shutil.unpack_archive('extract_me.zip', 'Extracted Me', 'zip')
 print("----------------------------------")
+
+#* Getting passwords from user
+#? Bad Practice
+hello = input("Enter password: ")
+print(hello)
+print("----------------------------------")
+
+#? Best Practice
+import getpass
+password = getpass.getpass("Enter password: ")
+print(password)
+print("----------------------------------")
