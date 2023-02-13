@@ -583,5 +583,32 @@ test_string = "Hello, I'm a cat. I sound like 'Meow'. Dial my number +91 9876543
 matches = re.search(r'\+91\s[\d{10}]+', test_string) # Returns the match object with the match and the index
 print(matches)
 print(matches.span()) # Shows the index upto which the matched string gets spanned 
-print(matches.group()) # Shows the matched string
+print(matches.group()) # Shows the first matched string
+print("----------------------------------")
+print(re.findall(r'\+91\s[\d{10}]+', test_string)) # Shows all the matching strings 
+print("----------------------------------")
+
+#* Zip and Unzip file
+
+#? Zipping a file using zipfile
+# In this method we can only add file by file to compress
+import zipfile
+comp_file = zipfile.ZipFile('compressed_file.zip','w')
+comp_file.write('newFile.txt', compress_type=zipfile.ZIP_DEFLATED)
+comp_file.write('sample.txt', compress_type=zipfile.ZIP_DEFLATED)
+comp_file.close()
+
+#? Unzipping a file using zipfile
+ext_file = zipfile.ZipFile('compressed_file.zip','r')
+ext_file.extractall('Extracted Files') 
+
+#? Zipping a file using shutil
+# In this method we can compress a folder
+import shutil
+import os
+path = os.getcwd() +"/Extracted Files"
+shutil.make_archive('extract_me','zip',path) 
+
+#? Unzipping a file using shutil
+shutil.unpack_archive('extract_me.zip', 'Extracted Me', 'zip')
 print("----------------------------------")
