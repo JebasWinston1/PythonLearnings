@@ -566,3 +566,13 @@ def_dict = defaultdict(lambda: 'a') # We need to pass a lambda function with a d
 def_dict['Hello'] = 'World'
 print(def_dict['World']) # If the key isn't present takes the default value
 print("----------------------------------")
+
+#* Seed Function
+import random
+random.seed(1)
+print(random.randint(0,100))
+print(random.randint(0,100))
+random.seed(2)
+print(random.randint(0,100))
+print(random.randint(0,100))
+print("----------------------------------")
