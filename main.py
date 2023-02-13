@@ -615,12 +615,32 @@ print("----------------------------------")
 
 #* Getting passwords from user
 #? Bad Practice
-hello = input("Enter password: ")
-print(hello)
+# hello = input("Enter password: ")
+# print(hello)
 print("----------------------------------")
 
 #? Best Practice
 import getpass
-password = getpass.getpass("Enter password: ")
-print(password)
+# password = getpass.getpass("Enter password: ")
+# print(password)
 print("----------------------------------")
+
+#* Advanced Numbers
+#? Decimal To Hexadecimal
+print(hex(10))
+
+#? Decimal To Binary
+print(bin(10))
+
+#? Power
+print(2**3) # Usual way
+print(pow(2,3)) # Using power method
+print(pow(2,3,2)) # similar to (2**3)%2
+
+#? Absolute Value
+print(abs(-2))
+print(abs(2))
+
+#? Rounding Of
+print(round(3.14985673489))
+print(round(3.14985673489, 3)) # Rounding of to two decimal places
