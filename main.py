@@ -484,7 +484,7 @@ def add(value):
         print("Can I enter?")
     finally: # This always run
         print("I always run")
-print(add(int(input("Enter a value: "))))
+# print(add(int(input("Enter a value: "))))
 print("----------------------------------")
 
 #* Generators
@@ -496,3 +496,73 @@ def fib_gen(num):
 
 for i in fib_gen(4):
     print(i)
+print("----------------------------------")
+
+#* Decorators
+
+#? Method inside a method
+def sample_fun():
+    print("Sample Function starts!")
+    def inside_fun(): # We can't call this fun outside the sample_fun
+        print("Inside Function starts!")
+    print("Sample Function ends!")
+
+sample_fun()    
+temp_fun = sample_fun() # Assigning function to a variable
+print(type(temp_fun)) # Previous line don't work if the sample_fun doesn't return anything.
+print("----------------------------------")
+
+#? Method returning a method
+def new_fun():
+    def hello_fun():
+        print("Hello!")
+    return hello_fun # Returning the inside method
+
+temp_fun = new_fun()
+new_fun() # It will not print anything since the method has no print stmts
+temp_fun()
+print("----------------------------------")
+
+#? Decorate using @
+def decorate_fun(old_fun):
+    def wrap_fun():
+        print("Some code before old func")
+        old_fun()
+        print("Some code after old func")
+    return wrap_fun
+
+# Using decorators without @
+decorated_fun = decorate_fun(sample_fun)
+decorated_fun()
+print("----------------------------------")
+    
+# Using decorators with @
+@decorate_fun
+def decorate_me():
+    print("Decorate me!")
+
+decorate_me()
+print("----------------------------------")
+
+#* Python Collections
+
+#? Counter
+from collections import Counter
+samp_list = [1,2,3,1,2,3,1,2,3,12,3,3,1,1,12,2,2,2,3,3,3,3]
+print(Counter(samp_list)) # Returns a dictionary 
+print("----------------------------------")
+
+samp_string = 'aaaabbbbccccbbbbddddbbbeeeeaaaababababbabab'
+print(Counter(samp_string))
+print("----------------------------------")
+
+counter = Counter(samp_list)
+print(counter.most_common())
+print("----------------------------------")
+
+#? Default Dictionary
+from collections import defaultdict
+def_dict = defaultdict(lambda: 'a') # We need to pass a lambda function with a default value
+def_dict['Hello'] = 'World'
+print(def_dict['World']) # If the key isn't present takes the default value
+print("----------------------------------")
